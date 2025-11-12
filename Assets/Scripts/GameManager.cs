@@ -80,11 +80,11 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        //Debug
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            PickRandomWord(currentWordLength);
-        }
+        ////Debug
+        //if (Input.GetKeyDown(KeyCode.DownArrow))
+        //{
+        //    PickRandomWord(currentWordLength);
+        //}
 
         //Key Management
         foreach (char c in Input.inputString)
@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
                 Destroy(AnswersPanel.transform.GetChild(answIndex).transform.GetChild(currentLetterIndex).GetChild(0).gameObject);
             }
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow) && currentLetterIndex == (currentWordLength))
+        if (Input.GetKeyDown(KeyCode.Space) && currentLetterIndex == (currentWordLength))
         {
             print("VERIFY");
             if (!wordsSet.Contains(userWord.ToLowerInvariant()))
@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour
                 answIndex++;
             else
             {
-                LoseHealth();
+                Defeat();
             }
             currentLetterIndex = 0;
         }

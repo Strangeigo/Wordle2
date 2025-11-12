@@ -21,9 +21,9 @@ public class BonusManager : MonoBehaviour
     {
         GetCurrentWord();
 
-        AddBonus(() => Bonus_GetVowels(5)); // <-- Fixed
+        //AddBonus(() => Bonus_GetVowels(5));
 
-        ApplyBonuses();
+        //ApplyBonuses();
 
     }
     private void GetCurrentWord()
